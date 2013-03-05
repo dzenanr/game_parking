@@ -3,7 +3,7 @@ part of game_parking_app;
 class Board {
 
   // The board is redrawn every INTERVAL ms.
-  static final int interval = 8;
+  static const int interval = 8;
 
   static final int LINE_WIDTH = 1;
   static final String LINE_COLOR = '#000000'; // black
@@ -46,7 +46,7 @@ class Board {
     // Canvas event.
     document.query('#canvas').onMouseDown.listen(onMouseDown);
     // Redraw every INTERVAL ms.
-    new Timer.repeating(interval, (t) => redraw());
+    new Timer.repeating(const Duration(milliseconds: interval), (t) => redraw());
   }
 
   void set currentArea(Area area) {
