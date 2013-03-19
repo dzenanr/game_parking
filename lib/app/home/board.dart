@@ -3,7 +3,7 @@ part of game_parking_app;
 class Board {
 
   // The board is redrawn every INTERVAL ms.
-  static const int interval = 8;
+  static const int INTERVAL = 8;
 
   static final int LINE_WIDTH = 1;
   static final String LINE_COLOR = '#000000'; // black
@@ -46,7 +46,7 @@ class Board {
     // Canvas event.
     document.query('#canvas').onMouseDown.listen(onMouseDown);
     // Redraw every INTERVAL ms.
-    new Timer.repeating(const Duration(milliseconds: interval), (t) => redraw());
+    new Timer.periodic(const Duration(milliseconds: INTERVAL), (t) => redraw());
   }
 
   void set currentArea(Area area) {
@@ -149,8 +149,8 @@ class Board {
   }
 
   void onMouseDown(MouseEvent e) {
-    int row = e.offsetY ~/ cellHeight;
-    int column = e.offsetX ~/ cellWidth;
+    int row = e.offset.y ~/ cellHeight;
+    int column = e.offset.x ~/ cellWidth;
     Car car = getCarInCell(row, column);
     if (car != null) {
       currentParking.cars.deselect();
