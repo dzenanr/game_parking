@@ -37,7 +37,6 @@ import 'dart:html';
 import 'dart:async';
 
 import 'package:dartling/dartling.dart';
-import 'package:dartling/dartling_app.dart';
 
 import 'package:game_parking/game_parking.dart';
 
