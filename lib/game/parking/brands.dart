@@ -16,7 +16,7 @@ class Brands extends BrandsGen {
   Brands(Concept concept) : super(concept);
 
   Brand getBrand(String name) {
-    return findByAttributeId("name", name);
+    return singleWhereAttributeId("name", name);
   }
 
 }

@@ -9,17 +9,17 @@ class ParkingEntries extends ModelEntries {
   Map<String, Entities> newEntries() {
     var entries = new Map<String, Entities>();
     var concept;
-    concept = model.concepts.findByCode("Area");
+    concept = model.concepts.singleWhereCode("Area");
     entries["Area"] = new Areas(concept);
-    concept = model.concepts.findByCode("Brand");
+    concept = model.concepts.singleWhereCode("Brand");
     entries["Brand"] = new Brands(concept);
-    concept = model.concepts.findByCode("Parking");
+    concept = model.concepts.singleWhereCode("Parking");
     entries["Parking"] = new Parkings(concept);
     return entries;
   }
 
   Entities newEntities(String conceptCode) {
-    var concept = model.concepts.findByCode(conceptCode);
+    var concept = model.concepts.singleWhereCode(conceptCode);
     if (concept == null) {
       throw new ConceptError("${conceptCode} concept does not exist.") ;
     }
@@ -38,7 +38,7 @@ class ParkingEntries extends ModelEntries {
   }
 
   ConceptEntity newEntity(String conceptCode) {
-    var concept = model.concepts.findByCode(conceptCode);
+    var concept = model.concepts.singleWhereCode(conceptCode);
     if (concept == null) {
       throw new ConceptError("${conceptCode} concept does not exist.") ;
     }

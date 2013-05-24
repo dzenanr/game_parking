@@ -5,13 +5,13 @@ part of game_parking;
 abstract class BrandGen extends ConceptEntity<Brand> {
 
   BrandGen(Concept concept) : super.of(concept) {
-    Concept carConcept = concept.model.concepts.findByCode("Car");
+    Concept carConcept = concept.model.concepts.singleWhereCode("Car");
     setChild("cars", new Cars(carConcept));
   }
 
   BrandGen.withId(Concept concept, String name) : super.of(concept) {
     setAttribute("name", name);
-    Concept carConcept = concept.model.concepts.findByCode("Car");
+    Concept carConcept = concept.model.concepts.singleWhereCode("Car");
     setChild("cars", new Cars(carConcept));
   }
 

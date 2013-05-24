@@ -16,7 +16,7 @@ class Areas extends AreasGen {
   Areas(Concept concept) : super(concept);
 
   Area getArea(String name) {
-    return findByAttribute("name", name);
+    return firstWhereAttribute("name", name);
   }
 
 }

@@ -5,13 +5,13 @@ part of game_parking;
 abstract class AreaGen extends ConceptEntity<Area> {
 
   AreaGen(Concept concept) : super.of(concept) {
-    Concept parkingConcept = concept.model.concepts.findByCode("Parking");
+    Concept parkingConcept = concept.model.concepts.singleWhereCode("Parking");
     setChild("parkings", new Parkings(parkingConcept));
   }
 
   AreaGen.withId(Concept concept, String name) : super.of(concept) {
     setAttribute("name", name);
-    Concept parkingConcept = concept.model.concepts.findByCode("Parking");
+    Concept parkingConcept = concept.model.concepts.singleWhereCode("Parking");
     setChild("parkings", new Parkings(parkingConcept));
   }
 

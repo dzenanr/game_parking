@@ -5,14 +5,14 @@ part of game_parking;
 abstract class ParkingGen extends ConceptEntity<Parking> {
 
   ParkingGen(Concept concept) : super.of(concept) {
-    Concept carConcept = concept.model.concepts.findByCode("Car");
+    Concept carConcept = concept.model.concepts.singleWhereCode("Car");
     setChild("cars", new Cars(carConcept));
   }
 
   ParkingGen.withId(Concept concept, Area area, int number) : super.of(concept) {
     setParent("area", area);
     setAttribute("number", number);
-    Concept carConcept = concept.model.concepts.findByCode("Car");
+    Concept carConcept = concept.model.concepts.singleWhereCode("Car");
     setChild("cars", new Cars(carConcept));
   }
 
