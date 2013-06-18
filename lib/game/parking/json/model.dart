@@ -64,6 +64,8 @@ var gameParkingModelJson = r'''
                "category":"identifier",
                "name":"name",
                "type":"String",
+               "essential":true,
+               "sensitive":false,
                "init":""
             }
          ]
@@ -81,6 +83,8 @@ var gameParkingModelJson = r'''
                "category":"identifier",
                "name":"name",
                "type":"String",
+               "essential":true,
+               "sensitive":false,
                "init":""
             },
             {
@@ -88,6 +92,8 @@ var gameParkingModelJson = r'''
                "category":"required",
                "name":"length",
                "type":"int",
+               "essential":true,
+               "sensitive":false,
                "init":"2"
             },
             {
@@ -95,6 +101,8 @@ var gameParkingModelJson = r'''
                "category":"required",
                "name":"colorName",
                "type":"String",
+               "essential":true,
+               "sensitive":false,
                "init":""
             },
             {
@@ -102,6 +110,8 @@ var gameParkingModelJson = r'''
                "category":"required",
                "name":"color",
                "type":"String",
+               "essential":true,
+               "sensitive":false,
                "init":""
             },
             {
@@ -109,6 +119,8 @@ var gameParkingModelJson = r'''
                "category":"attribute",
                "name":"red",
                "type":"String",
+               "essential":false,
+               "sensitive":false,
                "init":""
             },
             {
@@ -116,6 +128,8 @@ var gameParkingModelJson = r'''
                "category":"attribute",
                "name":"green",
                "type":"String",
+               "essential":false,
+               "sensitive":false,
                "init":""
             },
             {
@@ -123,6 +137,8 @@ var gameParkingModelJson = r'''
                "category":"attribute",
                "name":"blue",
                "type":"String",
+               "essential":false,
+               "sensitive":false,
                "init":""
             }
          ]
@@ -140,6 +156,8 @@ var gameParkingModelJson = r'''
                "category":"identifier",
                "name":"number",
                "type":"int",
+               "essential":true,
+               "sensitive":false,
                "init":""
             }
          ]
@@ -157,6 +175,8 @@ var gameParkingModelJson = r'''
                "category":"required",
                "name":"orientation",
                "type":"String",
+               "essential":true,
+               "sensitive":false,
                "init":"horizontal"
             },
             {
@@ -164,6 +184,8 @@ var gameParkingModelJson = r'''
                "category":"required",
                "name":"startRow",
                "type":"int",
+               "essential":true,
+               "sensitive":false,
                "init":""
             },
             {
@@ -171,6 +193,8 @@ var gameParkingModelJson = r'''
                "category":"required",
                "name":"startColumn",
                "type":"int",
+               "essential":true,
+               "sensitive":false,
                "init":""
             },
             {
@@ -178,6 +202,8 @@ var gameParkingModelJson = r'''
                "category":"required",
                "name":"currentRow",
                "type":"int",
+               "essential":false,
+               "sensitive":false,
                "init":""
             },
             {
@@ -185,6 +211,8 @@ var gameParkingModelJson = r'''
                "category":"required",
                "name":"currentColumn",
                "type":"int",
+               "essential":false,
+               "sensitive":false,
                "init":""
             },
             {
@@ -192,6 +220,8 @@ var gameParkingModelJson = r'''
                "category":"attribute",
                "name":"selected",
                "type":"bool",
+               "essential":false,
+               "sensitive":false,
                "init":"false"
             }
          ]

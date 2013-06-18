@@ -9,7 +9,7 @@ class GameModels extends DomainModels {
   }
 
   ParkingEntries fromJsonToParkingEntries() {
-    return new ParkingEntries(fromMagicBoxes(
+    return new ParkingEntries(fromJsonToModel(
       gameParkingModelJson,
       domain,
       GameRepo.gameParkingModelCode));

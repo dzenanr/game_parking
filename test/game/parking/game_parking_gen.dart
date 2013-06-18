@@ -38,14 +38,10 @@ import 'package:game_parking/game_parking.dart';
 genCode() {
   var repo = new Repo();
 
-  // change "Dartling" to "YourDomainName"
   var gameDomain = new Domain("Game");
 
-  // change dartling to yourDomainName
-  // change Skeleton to YourModelName
-  // change "Skeleton" to "YourModelName"
   Model gameParkingModel =
-      fromMagicBoxes(gameParkingModelJson, gameDomain, "Parking");
+      fromJsonToModel(gameParkingModelJson, gameDomain, "Parking");
 
   repo.domains.add(gameDomain);
 
