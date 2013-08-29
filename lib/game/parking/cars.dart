@@ -6,8 +6,10 @@ class Car extends CarGen {
 
   Car(Concept concept) : super(concept);
 
-  Car.withId(Concept concept, Parking parking, Brand brand) :
-    super.withId(concept, parking, brand);
+  Car.withId(Concept concept, Brand brand, Parking parking) : 
+    super.withId(concept, brand, parking);
+  
+  // specific code from here
 
   set startRow(int a) {
     super.startRow = a;
@@ -94,6 +96,8 @@ class Car extends CarGen {
 class Cars extends CarsGen {
 
   Cars(Concept concept) : super(concept);
+  
+  // specific code from here
 
   void deselect() {
     for (Car car in this) {

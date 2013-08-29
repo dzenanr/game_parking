@@ -14,6 +14,8 @@ class Parking extends ParkingGen {
 class Parkings extends ParkingsGen {
 
   Parkings(Concept concept) : super(concept);
+  
+  // specific code from here
 
   Parking getParkingWithinArea(int parkingNumber) {
     for (Parking parking in this) {
