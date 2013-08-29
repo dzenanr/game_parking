@@ -33,7 +33,6 @@ class Board {
     height = canvas.height;
     cellWidth = width ~/ COLUMNS_COUNT;
     cellHeight = height ~/ ROWS_COUNT;
-    // border();
 
     menuBar = new MenuBar(this);
     actionPanel = new ActionPanel(this);
@@ -46,10 +45,11 @@ class Board {
     // Canvas event.
     document.query('#canvas').onMouseDown.listen(onMouseDown);
     // Redraw every INTERVAL ms.
-    new Timer.periodic(const Duration(milliseconds: INTERVAL), (t) => redraw());
+    new Timer.periodic(const Duration(milliseconds: INTERVAL),
+        (t) => redraw());
   }
 
-  void set currentArea(Area area) {
+  set currentArea(Area area) {
     _currentArea = area;
     currentParking = area.parkings.getParkingWithinArea(1);
     actionPanel.displayCurrentArea();
@@ -59,7 +59,7 @@ class Board {
     return _currentArea;
   }
 
-  void set currentParking(Parking parking) {
+  set currentParking(Parking parking) {
     _currentParking = parking;
     actionPanel.displayCurrentParking();
   }
@@ -68,12 +68,12 @@ class Board {
     return _currentParking;
   }
 
-  void redraw() {
+  redraw() {
     clear();
     displayCars();
   }
 
-  void restart() {
+  restart() {
     for (Car car in currentParking.cars) {
       car.currentRow = car.startRow;
       car.currentColumn = car.startColumn;
@@ -81,12 +81,11 @@ class Board {
     }
   }
 
-  void clear() {
+  clear() {
     context.clearRect(0, 0, width, height);
-    // border();
   }
 
-  void border() {
+  border() {
     context.beginPath();
     context.rect(0, 0, width, height);
     context.lineWidth = LINE_WIDTH;
@@ -95,13 +94,13 @@ class Board {
     context.closePath();
   }
 
-  void displayCars() {
+  displayCars() {
     for (Car car in currentParking.cars) {
       displayCar(car);
     }
   }
 
-  void displayCar(Car car) {
+  displayCar(Car car) {
     context.beginPath();
     int row = car.currentRow;
     int column = car.currentColumn;
@@ -118,7 +117,6 @@ class Board {
     context.lineWidth = LINE_WIDTH;
     context.strokeStyle = LINE_COLOR;
     context.fillStyle = car.brand.color;
-    // context.rect(x, y , carWidth, carHeight);
     context.fillRect(x, y , carWidth, carHeight);
     if (car.selected) {
       context.rect(x, y, SSS, SSS);
@@ -148,7 +146,7 @@ class Board {
     return null;
   }
 
-  void onMouseDown(MouseEvent e) {
+  onMouseDown(MouseEvent e) {
     int row = e.offset.y ~/ cellHeight;
     int column = e.offset.x ~/ cellWidth;
     Car car = getCarInCell(row, column);

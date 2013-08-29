@@ -1,0 +1,24 @@
+Compilation to JavaScript
+
+--- 2013-08-29 15:19:34 Compiling /game_parking/web/game_parking.dart... ---
+find: `>     bin [': No such file or directory
+../../git/dart/game/game_parking/web/packages/path/path.dart:49:23: Hint: Can't find 'dart.io.Directory.current' in the current library.
+Did you forget to add an import?
+@MirrorsUsed(targets: 'dart.dom.html.window, '
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+../../git/dart/game/game_parking/web/packages/path/path.dart:49:23: Hint: Can't find 'dart.io.Platform.operatingSystem' in the current library.
+Did you forget to add an import?
+@MirrorsUsed(targets: 'dart.dom.html.window, '
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+../../git/dart/game/game_parking/web/packages/dartling/domain/model/entity.dart:547:17: Hint: The class "ConceptEntity" overrides "operator==", but not "get hashCode".
+  bool operator ==(Object other) {
+
+                ^^
+../../git/dart/game/game_parking/web/packages/dartling/domain/model/oid.dart:45:17: Hint: The class "Oid" overrides "operator==", but not "get hashCode".
+  bool operator ==(Object other) {
+
+                ^^
+../../git/dart/game/game_parking/web/packages/dartling/domain/model/id.dart:109:18: Hint: The class "Id" overrides "operator==", but not "get hashCode".
+   bool operator ==(Object other) {
+
+                 ^^

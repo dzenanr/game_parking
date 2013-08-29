@@ -6,9 +6,9 @@ class Car extends CarGen {
 
   Car(Concept concept) : super(concept);
 
-  Car.withId(Concept concept, Brand brand, Parking parking) : 
+  Car.withId(Concept concept, Brand brand, Parking parking) :
     super.withId(concept, brand, parking);
-  
+
   // specific code from here
 
   set startRow(int a) {
@@ -29,7 +29,8 @@ class Car extends CarGen {
         return true;
       }
     } else if (orientation == 'horizontal' && brand.length == 3) {
-      if (currentRow == row && (currentColumn == column - 1 || currentColumn == column - 2)) {
+      if (currentRow == row && (currentColumn == column - 1 ||
+          currentColumn == column - 2)) {
         return true;
       }
     } else if (orientation == 'vertical' && brand.length == 2) {
@@ -37,7 +38,8 @@ class Car extends CarGen {
         return true;
       }
     } else if (orientation == 'vertical' && brand.length == 3) {
-      if ((currentRow == row - 1 || currentRow == row - 2) && currentColumn == column) {
+      if ((currentRow == row - 1 || currentRow == row - 2) &&
+          currentColumn == column) {
         return true;
       }
     }
@@ -59,15 +61,19 @@ class Car extends CarGen {
 
   bool beforeCell(int row, int column) {
     if (orientation == 'horizontal') {
-      if (currentRow == row && brand.length == 2 && currentColumn == column - 2) {
+      if (currentRow == row && brand.length == 2 &&
+          currentColumn == column - 2) {
         return true;
-      } else if (currentRow == row && brand.length == 3 && currentColumn == column - 3) {
+      } else if (currentRow == row && brand.length == 3 &&
+          currentColumn == column - 3) {
         return true;
       }
     } else if (orientation == 'vertical') {
-      if (currentRow == row - 2 && brand.length == 2 && currentColumn == column) {
+      if (currentRow == row - 2 && brand.length == 2 &&
+          currentColumn == column) {
         return true;
-      } else if (currentRow == row - 3 && brand.length == 3 && currentColumn == column) {
+      } else if (currentRow == row - 3 && brand.length == 3 &&
+          currentColumn == column) {
         return true;
       }
     }
@@ -96,10 +102,10 @@ class Car extends CarGen {
 class Cars extends CarsGen {
 
   Cars(Concept concept) : super(concept);
-  
+
   // specific code from here
 
-  void deselect() {
+  deselect() {
     for (Car car in this) {
       car.selected = false;
     }

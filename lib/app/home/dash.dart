@@ -19,11 +19,11 @@ class ActionPanel {
     parkingLabel = document.query('#parking');
   }
 
-  void displayCurrentArea() {
+  displayCurrentArea() {
     areaLabel.text = board.currentArea.name;
   }
 
-  void displayCurrentParking() {
+  displayCurrentParking() {
     parkingLabel.text = board.currentParking.number.toString();
   }
 
