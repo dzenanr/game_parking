@@ -1,4 +1,4 @@
-## Version history of [art_pen](https://github.com/dzenanr/art_pen)
+## Version history of [game_parking](https://github.com/dzenanr/game_parking)
 
 [based on](http://semver.org/)
 
