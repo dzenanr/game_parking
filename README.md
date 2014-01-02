@@ -13,7 +13,7 @@ Dependent on [dartling](http://pub.dartlang.org/packages/dartling).
 
 [**dartling: Domain Model Framework**](http://goo.gl/Fd08zZ)
 
-[*Learning Dart*](http://www.packtpub.com/learning-dart/book) by Dzenan Ridjanovic & Ivo Balbaert
+[*Learning Dart*](http://learningdart.org/) 
 
 [*Version History*](LOG.md)
 
