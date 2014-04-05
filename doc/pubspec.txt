@@ -7,19 +7,19 @@ description: Game Parking is a version of the Rush Hour game. dartling is a doma
 homepage: http://ondart.me/
 documentation: http://goo.gl/LDhRwm
 environment:
-  sdk: '>=0.8.10+8 <2.0.0'
+  sdk: '>=1.2.0 <2.0.0'
 dependencies:
-  browser: '>=0.9.0 <0.10.0'
+  browser: '>=0.10.0 <0.11.0'
+  dartling:
+    git: https://github.com/dzenanr/dartling.git
+
+dependencies:
+  browser: '>=0.10.0 <0.11.0'
   dartling: '>=2.0.0 <3.0.0'
   
 dependencies:
-  browser: '>=0.9.0 <0.10.0'
+  browser: '>=0.10.0 <0.11.0'
   dartling:
     path: 'C:\Users\ridjanod.FSA-RIDJANOD-2\dart\model\dartling'
 
-dependencies:
-  browser: '>=0.9.0 <0.10.0'
-  dartling:
-    git: 'https://github.com/dzenanr/dartling.git'
-    version: '>=2.0.0 <3.0.0'
    
