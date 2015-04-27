@@ -4,9 +4,12 @@ part of game_parking;
  
 abstract class CarGen extends ConceptEntity<Car> { 
  
-  CarGen(Concept concept) : super.of(concept); 
+  CarGen(Concept concept) {
+    this.concept = concept;
+  }
  
-  CarGen.withId(Concept concept, Brand brand, Parking parking) : super.of(concept) { 
+  CarGen.withId(Concept concept, Brand brand, Parking parking) {
+    this.concept = concept;
     setParent("brand", brand); 
     setParent("parking", parking); 
   } 
@@ -42,7 +45,9 @@ abstract class CarGen extends ConceptEntity<Car> {
  
 abstract class CarsGen extends Entities<Car> { 
  
-  CarsGen(Concept concept) : super.of(concept); 
+  CarsGen(Concept concept) {
+    this.concept = concept;
+  }
  
   Cars newEntities() => new Cars(concept); 
   Car newEntity() => new Car(concept); 

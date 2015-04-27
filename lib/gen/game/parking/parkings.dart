@@ -4,12 +4,14 @@ part of game_parking;
  
 abstract class ParkingGen extends ConceptEntity<Parking> { 
  
-  ParkingGen(Concept concept) : super.of(concept) { 
+  ParkingGen(Concept concept) { 
+    this.concept = concept;
     Concept carConcept = concept.model.concepts.singleWhereCode("Car"); 
     setChild("cars", new Cars(carConcept)); 
   } 
  
-  ParkingGen.withId(Concept concept, Area area, int number) : super.of(concept) { 
+  ParkingGen.withId(Concept concept, Area area, int number) { 
+    this.concept = concept;
     setParent("area", area); 
     setAttribute("number", number); 
     Concept carConcept = concept.model.concepts.singleWhereCode("Car"); 
@@ -35,7 +37,9 @@ abstract class ParkingGen extends ConceptEntity<Parking> {
  
 abstract class ParkingsGen extends Entities<Parking> { 
  
-  ParkingsGen(Concept concept) : super.of(concept); 
+  ParkingsGen(Concept concept) {
+    this.concept = concept;
+  }
  
   Parkings newEntities() => new Parkings(concept); 
   Parking newEntity() => new Parking(concept); 
