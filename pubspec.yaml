@@ -1,12 +1,11 @@
 name: game_parking
-version: 1.0.2
+version: 2.0.1
 author: Dzenan Ridjanovic <dzenanr@gmail.com>
-description: Game Parking is a version of the Rush Hour game. dartling is a domain model framework.
+description: Game Parking is a Rush Hour game. dartling is a domain model framework.
 homepage: http://ondart.me/
 documentation: http://goo.gl/LDhRwm
 dependencies:
   browser: any
-  dartling:
-    git: git://github.com/dzenanr/dartling.git
+  dartling: any
 
 
