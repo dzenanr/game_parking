@@ -35,6 +35,7 @@ class ParkingEntries extends ModelEntries {
     if (concept.code == "Car") { 
       return new Cars(concept); 
     } 
+    return null;
   } 
  
   ConceptEntity newEntity(String conceptCode) { 
@@ -54,9 +55,10 @@ class ParkingEntries extends ModelEntries {
     if (concept.code == "Car") { 
       return new Car(concept); 
     } 
+    return null;
   } 
  
-  fromJsonToData() { 
+  void fromJsonToData() { 
     fromJson(gameParkingDataJson); 
   } 
  
