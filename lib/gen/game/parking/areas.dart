@@ -4,19 +4,21 @@ part of game_parking;
  
 abstract class AreaGen extends ConceptEntity<Area> { 
  
-  AreaGen(Concept concept) : super.of(concept) { 
+  AreaGen(Concept concept) { 
+    this.concept = concept;
     Concept parkingConcept = concept.model.concepts.singleWhereCode("Parking"); 
     setChild("parkings", new Parkings(parkingConcept)); 
   } 
  
-  AreaGen.withId(Concept concept, String name) : super.of(concept) { 
+  AreaGen.withId(Concept concept, String name) { 
+    this.concept = concept;
     setAttribute("name", name); 
     Concept parkingConcept = concept.model.concepts.singleWhereCode("Parking"); 
     setChild("parkings", new Parkings(parkingConcept)); 
   } 
  
   String get name => getAttribute("name"); 
-  set name(String a) => setAttribute("name", a); 
+  void set name(String a) { setAttribute("name", a); }
   
   Parkings get parkings => getChild("parkings"); 
   
@@ -31,7 +33,9 @@ abstract class AreaGen extends ConceptEntity<Area> {
  
 abstract class AreasGen extends Entities<Area> { 
  
-  AreasGen(Concept concept) : super.of(concept); 
+  AreasGen(Concept concept) {
+    this.concept = concept;
+  }
  
   Areas newEntities() => new Areas(concept); 
   Area newEntity() => new Area(concept); 

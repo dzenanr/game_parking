@@ -84,7 +84,7 @@ class Car extends CarGen {
     return afterCell(row, column) || beforeCell(row, column);
   }
 
-  moveToOrTowardCell(int row, int column) {
+  void moveToOrTowardCell(int row, int column) {
     if (afterCell(row, column)) {
       currentRow = row;
       currentColumn = column;
@@ -117,6 +117,7 @@ class Cars extends CarsGen {
         return car;
       }
     }
+    return null;
   }
 
 }

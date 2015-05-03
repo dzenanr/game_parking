@@ -4,20 +4,19 @@ import "package:dartling/dartling.dart";
  
 import "package:game_parking/game_parking.dart"; 
  
-genCode() { 
+void genCode() { 
   var repo = new Repo(); 
  
   var gameDomain = new Domain("Game"); 
- 
-  Model gameParkingModel = 
-      fromJsonToModel(gameParkingModelJson, gameDomain, "Parking"); 
+  
+  fromJsonToModel(gameParkingModelJson, gameDomain, "Parking"); 
  
   repo.domains.add(gameDomain); 
  
   repo.gen("game_parking"); 
 } 
  
-initGameData(GameRepo gameRepo) { 
+void initGameData(GameRepo gameRepo) { 
    var gameModels = 
        gameRepo.getDomainModels(GameRepo.gameDomainCode); 
  

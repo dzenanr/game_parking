@@ -23,6 +23,7 @@ class Parkings extends ParkingsGen {
         return parking;
       }
     }
+    return null;
   }
 
   Parking getParking(String areaName, int parkingNumber) {
@@ -31,6 +32,7 @@ class Parkings extends ParkingsGen {
         return parking;
       }
     }
+    return null;
   }
 
 }
