@@ -6,6 +6,5 @@ homepage: http://ondart.me/
 documentation: http://goo.gl/LDhRwm
 dependencies:
   browser: any
-  dartling:
-    git: https://github.com/dzenanr/dartling.git
+  dartling: any
 
